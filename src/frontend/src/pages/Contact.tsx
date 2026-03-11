@@ -1,8 +1,9 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, User } from "lucide-react";
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 
 const contactItems = [
+  { label: "Owner", value: "Amulya M R" },
   { label: "Email", value: "amulyamr2008@gmail.com" },
   { label: "Address", value: "Bangalore, Karnataka" },
 ];
@@ -139,6 +140,8 @@ export default function Contact() {
               <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                 {c.label === "Email" ? (
                   <Mail className="w-5 h-5" />
+                ) : c.label === "Owner" ? (
+                  <User className="w-5 h-5" />
                 ) : (
                   <MapPin className="w-5 h-5" />
                 )}
